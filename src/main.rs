@@ -23,7 +23,7 @@ async fn main() {
                 Ok(data) => println!("Current Bitcoin Price: ${}", data.bitcoin.usd),
                 Err(_) => println!("Failed to parse response"),
             },
-            Err(_) => println!("Failed to fetch price"),
+            Err(_) => println!("Failed to fetch price, check your internet"),
         }
         sleep(Duration::from_secs(10)).await; // Wait 10 seconds before updating
     }
